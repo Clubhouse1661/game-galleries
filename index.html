@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Game Galleries</title>
+  <meta name="color-scheme" content="dark" />
+  <style>
+    :root {
+      --background: #0d1117; --card: #161b22; --foreground: #e6edf3;
+      --muted-foreground: #8b949e; --border: #30363d; --link: #58a6ff; --primary: #3b82f6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; background: var(--background); color: var(--foreground);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.5;
+      display: flex; align-items: center; justify-content: center; padding: 2rem 1rem;
+    }
+    main { width: 100%; max-width: 760px; }
+    h1 { font-size: 1.75rem; margin: 0 0 .25rem; letter-spacing: -.01em; }
+    p.sub { margin: 0 0 2rem; color: var(--muted-foreground); }
+    .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    a.card {
+      display: block; padding: 1.25rem 1.25rem 1.1rem; border: 1px solid var(--border); border-radius: 12px;
+      background: var(--card); color: inherit; text-decoration: none;
+      transition: border-color .15s, transform .15s, box-shadow .15s;
+    }
+    a.card:hover, a.card:focus-visible {
+      border-color: var(--primary); transform: translateY(-2px);
+      box-shadow: 0 8px 24px -12px rgba(59, 130, 246, .5); outline: none;
+    }
+    .tag { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted-foreground); }
+    .card h2 { font-size: 1.15rem; margin: .35rem 0 .4rem; }
+    .card p { margin: 0 0 .9rem; color: var(--muted-foreground); font-size: .95rem; }
+    .go { color: var(--link); font-size: .9rem; font-weight: 500; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Game Galleries</h1>
+    <p class="sub">Interactive reference pages.</p>
+    <div class="grid">
+      <a class="card" href="nova-drift/">
+        <span class="tag">Nova Drift</span>
+        <h2>Complete Mod Atlas — Infused Stormblade</h2>
+        <p>Every mod in the game, with the Infused Stormblade build path highlighted by phase.</p>
+        <span class="go">Open atlas →</span>
+      </a>
+      <a class="card" href="disco-elysium-cryptids/">
+        <span class="tag">Disco Elysium</span>
+        <h2>The Cryptozoological Collection of Martinaise</h2>
+        <p>An illustrated gallery of the cryptids of Revachol and their lore.</p>
+        <span class="go">Open gallery →</span>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
